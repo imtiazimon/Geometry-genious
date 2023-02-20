@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geometry</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+  <header>
+    <div class="navbar bg-sky-200 mx-auto lg:px-10 ">
+      <div class="navbar-start block">
+        <p class=" text-gray-700 lg:text-4xl sm:text-2xl font-bold ">Interactive</p>
+        <p class="font-semibold lg:text-2xl  sm:text-xl   text-zinc-600">Geometric Genious</p>
+      </div>
+
+      <div class="navbar-end">
+        <button class="btn btn-primary"><a href="blog.html">Blog</a></button>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="  sm:flex-row lg:flex  ">
+      <div class="figure-details lg:w-2/3 sm:w-[100%]  grid lg:grid-cols-3 sm:grid-cols-1 ">
+        <!-- triangle -->
+        <div class="card w-100 bg-base-100 shadow-xl m-5 card1" id="card1">
+          <figure class="px-10 pt-10">
+            <img src="images/triangle.png" alt="triangle" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title" id="triangle">Triangle</h2>
+            <p>Area(A)= 0.5 x b x h</p>
+            <table class="my-2  pb-0">
+              <tr>
+                <th><input type="number" id="bOfTriangle" class="bg-gray-100 w-3/4" placeholder="b"> cm</th>
+
+                <th><input type="number" id="hOfTriangle" class="bg-gray-100 w-3/4" placeholder="h"> cm</th>
+              </tr>
+            </table>
+            <div class="card-actions">
+              <button class="btn btn-primary" id="triangleBtn">Calculate</button>
+            </div>
+          </div>
+        </div>
+        <!-- rectangle -->
+        <div class="card w-100 bg-base-100 shadow-xl m-5 card2" id="card2">
+          <figure class="px-10 pt-10">
+            <img src="images/rectangle.png" alt="triangle" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title" id="rectangle">Rectangle</h2>
+            <p>Area(A)= w x l</p>
+            <table class="my-2  pb-0">
+              <tr>
+                <th><input type="number" id="wOfRectangle" class="bg-gray-100 w-3/4" placeholder="w"> cm</th>
+
+                <th><input type="number" id="lOfRectangle" class="bg-gray-100 w-3/4" placeholder="l"> cm</th>
+              </tr>
+            </table>
+            <div class="card-actions">
+              <button class="btn btn-primary" id="rectangleBtn">Calculate</button>
+            </div>
+          </div>
+        </div>
+        <!-- parallelogram -->
+        <div class="card w-100 bg-base-100 shadow-xl m-5 card3">
+          <figure class="px-10 pt-10">
+            <img src="images/parallelogram.png" alt="triangle" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title" id="parallelogram">Parallelogram</h2>
+            <p>Area(A)= b x h</p>
+            <table class="my-2  pb-0">
+              <tr>
+                <th><input type="number" class="bg-gray-100 w-3/4" id="bOfParallelogram" placeholder="b"> cm</th>
+
+                <th><input type="number" class="bg-gray-100 w-3/4" id="hOfParallelogram" placeholder="h"> cm</th>
+              </tr>
+            </table>
+            <div class="card-actions">
+              <button class="btn btn-primary" id="parallelogramBtn">Calculate</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- rhombus -->
+        <div class="card w-100 bg-base-100 shadow-xl m-5 card4">
+          <figure class="px-10 pt-10">
+            <img src="images/rhombus.png" alt="triangle" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title" id="rhombus">Rhombus</h2>
+            <p class="pb-0">Area(A)= 0.5 x d<sub>1</sub> x d<sub>2</sub></p>
+            <table class="mb-2  pb-0">
+              <tr>
+                <th><input type="number" class="bg-gray-100 w-3/4" id="d1Rhombus" placeholder="d1"> cm</th>
+
+                <th><input type="number" class="bg-gray-100 w-3/4" id="d2Rhombus" placeholder="d2"> cm</th>
+              </tr>
+            </table>
+            <div class="card-actions">
+              <button class="btn btn-primary" id="rhombusBtn">Calculate</button>
+            </div>
+          </div>
+        </div>
+        <!-- pentagon -->
+        <div class="card w-100 bg-base-100 shadow-xl m-5 card5">
+          <figure class="px-10 pt-10">
+            <img src="images/pentagon.png" alt="triangle" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title" id="pentagon">Pentagon</h2>
+            <p>Area(A)= 0.5 x p x b</p>
+            <table class="my-2  pb-0">
+              <tr>
+                <th><input type="number" class="bg-gray-100 w-3/4" id="pOfPentagon" placeholder="p"> cm</th>
+
+                <th><input type="number" class="bg-gray-100 w-3/4" id="bOfPentagon" placeholder="b"> cm</th>
+              </tr>
+            </table>
+            <div class="card-actions">
+              <button class="btn btn-primary" id="pentagonBtn">Calculate</button>
+            </div>
+          </div>
+        </div>
+        <!-- ellipse -->
+        <div class="card w-100 bg-base-100 shadow-xl m-5 card6">
+          <figure class="px-10 pt-10 ">
+            <img src="images/ellipse.png" alt="triangle" class="rounded-xl" />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title" id="ellipse">Ellipse</h2>
+            <p class="mb-0">Area(A)= πab </p>
+            <table class="mb-2  pb-0">
+              <tr>
+                <th><input type="number" class="bg-gray-100 w-3/4" id="aOfEllipse" placeholder="a"> cm</th>
+                <th><input type="number" class="bg-gray-100 w-3/4" id="bOfEllipse" placeholder="b"> cm</th>
+              </tr>
+            </table>
+            <div class="card-actions">
+              <button class="btn btn-primary" id="ellipseBtn">Calculate</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="calculations bg-red-100 lg:w-[30%] mx-auto h-96 mt-6 rounded-xl overflow-auto">
+        <p class="text-center text-3xl font-semibold mt-6 "> <u> Area Calculation</u></p>
+
+        <div class="overflow-x-auto">
+          <table class="table w-full mt-4" id="tableContainer">
+            <!-- head -->
+            <thead>
+              <tr class="text-center">
+                <th>No</th>
+                <th>Name</th>
+                <th>Area</th>
+                <th>Convert</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+
+      </div>
+
+    </section>
+  </main>
+  <script src="js/index.js"></script>
+
+</body>
+
+</html>
